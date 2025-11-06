@@ -1,0 +1,5 @@
+uint32 power
+---
+uint32 new_battery
+---
+uint32 curr_battery
