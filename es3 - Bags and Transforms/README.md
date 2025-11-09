@@ -10,3 +10,20 @@
 | **Visualization**    | Create Python script to plot the path, highlighting final VC position and CS location                                                                                              |
 | **AprilTag IDs**     | - `tag36h11:0`: Floor plane reference<br>- `tag36h11:1`: Charging Station (CS)<br>- `tag36h11:2`: Vacuum Cleaner (VC)                                                              |
 | **Tools**            | Use `rviz2` for visualization (configure to show messages with past timestamps)                                                                                                    |
+
+
+## Execute the code
+
+Open two terminal, in one execute:
+
+```shell
+ros2 bag play es_bag2.mcap
+```
+
+In the other one:
+
+ ```shell
+ros2 run bag_listener listener
+ ```
+
+Note that the listener will not stop executing. You will need to manually stop it with `CTRL-C` when you notice that the output doesn't change any more.
