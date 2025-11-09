@@ -51,7 +51,7 @@ private:
                 floor_frame_, // Target frame.
                 vc_frame_,    // Source frame.
                 tf2::TimePointZero,
-                std::chrono::seconds(1) // Wait up to 1 sec.
+                std::chrono::seconds(5) // Wait up to 5 sec.
             );
 
         auto transform_cs_floor = 
@@ -59,7 +59,7 @@ private:
                 floor_frame_, // Target frame.
                 cs_frame_,    // Source frame.
                 tf2::TimePointZero,
-                std::chrono::seconds(1) // Wait up to 1 sec.
+                std::chrono::seconds(5) // Wait up to 5 sec.
             );
 
         // Point in vc.
