@@ -21,6 +21,13 @@ ros2 launch group_24_ex4 ex4.launch.py
 
 ## Solution
 
-The code is open-source and can be found at LINK.
+The code is open-source and can be found at [link](https://github.com/luca037/IntelligentRoboticsLabs/tree/main/es4%20-%20Services)
 
-TODO: write the part related to the detection of the apples, the main steps performed with computer vision!
+The strategy used to detect the apples can be summarized in the following steps:
+
+1. **Reconstruct the lidar map in an image**
+	- Transform the polar coordinates in `LaserScan.msg` into Cartesian coordinates (expressed w.r.t. the lidar reference frame).
+	- Transform the Cartesian coordinates into pixels coordinates.
+2. **Remove walls from the image** using Hough line transform.
+3. **Detect circles** using Hough circle transform and save the *centers*.
+4. Transform the coordinates of the *centers* from pixel to Cartesian.
